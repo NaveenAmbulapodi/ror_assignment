@@ -1,0 +1,27 @@
+<h1>Projects list</h1>
+<table>
+<thead>
+
+
+<th>Name</th>
+<th>Duration</th>
+<th>Total Team</th>
+</thead>
+<% @projects.each do |project| %>
+<tr>
+<td><%= project.name %> </td>
+
+
+<td><%= project.duration %></td>
+<td><%= project.total_team %></td>
+<td>
+
+<%= link_to "show", project_path(project) %>
+<%= link_to "Edit", edit_project_path(project) %>
+<%= link_to "delete", project_path(project), method: :delete, data: { confirm: "are u sure"} %>
+
+</td>
+</tr>
+<% end %>
+</table>
+<%= link_to "New Project",new_project_path %>

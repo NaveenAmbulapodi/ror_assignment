@@ -1,0 +1,23 @@
+<%= form_for @project do |f| %>
+<br>
+    <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    </div>
+    <br>
+    <div>
+    <%= f.label :duration %>
+    <%= f.text_field :duration %>
+    </div>
+    <br>
+    <div>
+    <%= f.label :total_team %>
+    <%= f.number_field :total_team %>
+    </div>
+    <br>
+    <div>
+    <%= f.submit %>
+    </div>
+    <% end %>
+    <br>
+    <%= link_to "back", projects_path %>
