@@ -1,0 +1,23 @@
+<%= form_for @blog do |f| %>
+<br>
+    <div>
+    <%= f.label :posts %>
+    <%= f.text_field :posts %>
+    </div>
+    <br>
+    <div>
+    <%= f.label :comments %>
+    <%= f.text_field :comments %>
+    </div>
+    <br>
+    <div>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+    </div>
+    <br>
+    <div>
+    <%= f.submit %>
+    </div>
+    <% end %>
+    <br>
+    <%= link_to "back", blogs_path %>
