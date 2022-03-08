@@ -1,0 +1,10 @@
+<%= f.fields_for :profile do |p| %>
+    <div class="field">
+    <%= p.label :firstname %><br />
+    <%= p.text_field :firstname %>
+    </div>
+    <div class="field">
+    <%= p.label :lastname %><br />
+    <%= p.text_field :lastname %>
+    </div>
+    <% end %>
