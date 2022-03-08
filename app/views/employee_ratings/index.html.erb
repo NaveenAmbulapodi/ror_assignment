@@ -1,0 +1,29 @@
+<h1>Employee_ratings list</h1>
+<table>
+<thead>
+
+
+<th>username</th>
+<th>rating</th>
+<th>reporting manager</th>
+</thead>
+<% @employee_ratings.each do |employee_rating| %>
+<tr>
+<td><%= employee_rating.username %> </td>
+
+
+<td><%= employee_rating.rating %></td>
+<td><%= employee_rating.reporting_manager %></td>
+<td>
+
+<%= link_to "show", employee_rating_path(employee_rating) %>
+<%= link_to "Edit", edit_employee_rating_path(employee_rating) %>
+<%= link_to "delete", employee_rating_path(employee_rating), method: :delete, data: { confirm: "are u sure"} %>
+
+</td>
+</tr>
+<% end %>
+</table>
+<%= link_to "New employee_rating",new_employee_rating_path %>
+
+

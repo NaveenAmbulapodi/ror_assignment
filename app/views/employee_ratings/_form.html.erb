@@ -1,0 +1,22 @@
+<%= form_for @employee_rating do |f| %>
+    <div>
+    <%= f.label :userename %>
+    <%= f.text_field :username %>
+    </div>
+    <br>
+    <div>
+    <%= f.label :rating %>
+    <%= f.number_field :rating, {min: 0, max: 5} %>
+    </div>
+    <br>
+    <div>
+    <%= f.label :reporting_manager %>
+    <%= f.text_field :reporting_manager %>
+    </div>
+    <br>
+    <div>
+    <%= f.submit %>
+    </div>
+    <br>
+    <% end %>
+    <%= link_to "back", employee_ratings_path %>

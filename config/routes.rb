@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   resources :projects
+<<<<<<< Updated upstream
   resources :blogs
   
+=======
+  resources :employee_ratings
+>>>>>>> Stashed changes
 
   root to: "projects#index"
   #devise_for :users

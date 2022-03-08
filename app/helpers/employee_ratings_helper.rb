@@ -1,0 +1,2 @@
+module EmployeeRatingsHelper
+end

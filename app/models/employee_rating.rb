@@ -1,0 +1,2 @@
+class EmployeeRating < ApplicationRecord
+end

@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2022_03_03_052322) do
 
@@ -33,6 +34,17 @@ ActiveRecord::Schema.define(version: 2022_03_03_052322) do
     t.datetime "updated_at", precision: 6, null: false
 =======
 ActiveRecord::Schema.define(version: 2022_03_03_094727) do
+=======
+ActiveRecord::Schema.define(version: 2022_03_07_114124) do
+
+  create_table "employee_ratings", force: :cascade do |t|
+    t.string "username"
+    t.integer "rating"
+    t.string "reporting_manager"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+>>>>>>> Stashed changes
 
   create_table "profiles", force: :cascade do |t|
     t.string "firstname"
