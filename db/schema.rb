@@ -10,9 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2022_03_03_052322) do
+ActiveRecord::Schema.define(version: 2022_03_07_114124) do
 
   create_table "blogs", force: :cascade do |t|
     t.text "posts"
@@ -29,14 +27,6 @@ ActiveRecord::Schema.define(version: 2022_03_03_052322) do
     t.index ["post_id"], name: "index_comments_on_post_id"
   end
 
-  create_table "posts", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-=======
-ActiveRecord::Schema.define(version: 2022_03_03_094727) do
-=======
-ActiveRecord::Schema.define(version: 2022_03_07_114124) do
-
   create_table "employee_ratings", force: :cascade do |t|
     t.string "username"
     t.integer "rating"
@@ -44,7 +34,11 @@ ActiveRecord::Schema.define(version: 2022_03_07_114124) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
->>>>>>> Stashed changes
+
+  create_table "posts", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "profiles", force: :cascade do |t|
     t.string "firstname"
@@ -53,7 +47,6 @@ ActiveRecord::Schema.define(version: 2022_03_07_114124) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
     t.index ["user_id"], name: "index_profiles_on_user_id"
->>>>>>> 8ee9acecfa625cd81749e5120694a68719a6c264
   end
 
   create_table "projects", force: :cascade do |t|
@@ -64,9 +57,6 @@ ActiveRecord::Schema.define(version: 2022_03_07_114124) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-<<<<<<< HEAD
-  add_foreign_key "comments", "posts"
-=======
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -88,6 +78,6 @@ ActiveRecord::Schema.define(version: 2022_03_07_114124) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "comments", "posts"
   add_foreign_key "profiles", "users"
->>>>>>> 8ee9acecfa625cd81749e5120694a68719a6c264
 end

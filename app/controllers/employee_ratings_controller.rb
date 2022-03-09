@@ -9,7 +9,7 @@ class EmployeeRatingsController < ApplicationController
         @employee_rating=EmployeeRating.new
         end
         def create
-        @employee_rating = EmployeeRating.new(employee_params)
+        @employee_rating = EmployeeRating.new(employee_rating_params)
         if @employee_rating.save
         redirect_to employee_ratings_path
         else

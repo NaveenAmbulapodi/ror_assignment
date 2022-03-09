@@ -1,5 +1,8 @@
+<br>
+<br>
+<br>
 <h1>Employee_ratings list</h1>
-<table>
+<table border="5" bordercolor=black; background:grey ; color:black >
 <thead>
 
 
@@ -25,5 +28,15 @@
 <% end %>
 </table>
 <%= link_to "New employee_rating",new_employee_rating_path %>
+
+
+<%= nav_bar fixed: :top, brand: "ROR ASSIGNMENT" do %>
+    <%= menu_group do %>
+        <%= menu_item "PROJECTS", projects_path %>
+        <%= menu_item "BLOGS", blogs_path %>
+        <%= menu_item "EMPLOYEE RATINGS", employee_ratings_path %>
+        
+    <% end %>
+    <% end %>
 
 

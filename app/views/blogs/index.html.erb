@@ -1,3 +1,6 @@
+<br>
+<br>
+<br>
 <h1>BLOGS</h1>
  <table border="5" bordercolor=black; background:grey ; color:black >
 <thead>
@@ -26,3 +29,12 @@
 <% end %>
 </table>
 <%= link_to "New Blog",new_blog_path %>
+
+<%= nav_bar fixed: :top, brand: "ROR ASSIGNMENT" do %>
+    <%= menu_group do %>
+        <%= menu_item "PROJECTS", projects_path %>
+        <%= menu_item "BLOGS", blogs_path %>
+        <%= menu_item "EMPLOYEE RATINGS", employee_ratings_path %>
+        
+    <% end %>
+    <% end %>
