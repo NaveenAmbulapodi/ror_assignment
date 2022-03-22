@@ -1,0 +1,42 @@
+<br>
+<br>
+<br>
+
+<h1>Employee Roles</h1>
+
+<table border="5" bordercolor=black; background:grey ; color:black >
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Role</th>
+      <th colspan="3">Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @employee_roles.each do |employee_role| %>
+      <tr>
+        <td><%= employee_role.name %></td>
+        <td><%= employee_role.role.name %></td>
+        <td><%= link_to 'Show', employee_role %></td>
+        <td><%= link_to 'Edit', edit_employee_role_path(employee_role) %></td>
+        <td><%= link_to 'Destroy', employee_role, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Employee Role', new_employee_role_path %>
+
+
+<%= nav_bar fixed: :top, brand: "ROR ASSIGNMENT" do %>
+  <%= menu_group do %>
+      <%= menu_item "PROJECTS", projects_path %>
+      <%= menu_item "BLOGS", blogs_path %>
+      <%= menu_item "EMPLOYEE RATINGS", employee_ratings_path %>
+      <%= menu_item "EMPLOYEE ROLES", employee_roles_path %>
+      
+  <% end %>
+  <% end %>

@@ -8,6 +8,12 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <nav>
+        <% if @current_employee_role&.manager? %>
+          <%= link_to "Employee_Roles", employee_roles_path %> |
+          <%= link_to "Roles", roles_path %>
+        <% end %>
+      </nav>
   </head>
 
   <body><br>

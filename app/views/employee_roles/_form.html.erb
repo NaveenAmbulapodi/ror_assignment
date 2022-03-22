@@ -1,0 +1,30 @@
+<%= form_with(model: employee_role) do |form| %>
+  <% if employee_role.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(employee_role.errors.count, "error") %> prohibited this employee_role from being saved:</h2>
+
+      <ul>
+        <% employee_role.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :role_id %>
+    <%= collection_select(
+  :employee_role, :role_id, Role.all, :id, :name, { prompt: true }
+) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
