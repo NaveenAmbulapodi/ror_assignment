@@ -17,14 +17,15 @@
   </div>
 
   <div class="field">
-    <%= form.label :role_id %>
-    <%= collection_select(
-  :employee_role, :role_id, Role.all, :id, :name, { prompt: true }
-) %>
-  </div>
+  <%= form.label :role %>
+  <%= form.select :role, [["Manager", "manager"], ["Tester", "tester"], ["Devloper", "devloper"], ["Lead", "lead"]] %>
+</div>
+
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+
+<%= link_to "Back", employee_roles_path %>
 

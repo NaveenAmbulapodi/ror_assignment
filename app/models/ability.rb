@@ -9,16 +9,16 @@ class Ability
     if employee_role.manager?
       can :manage, :all
     elsif employee_role.devloper?
-      can :read, Assignment
-      can :create, Assignment
-      can :update, Assignment
-      can :destroy, Assignment do |assignment|
-        assignment.try(:employee_role) == employee_role
+      can :read, Project
+      can :create, Project
+      can :update, Project
+      can :destroy, Project do |project|
+        project.try(:employee_role) == employee_role
     end    
     elsif employee_role.tester?
-      can :read, Assignment
-      can :update, Assignment do |assignment|
-      assignment.try(:employee_role) == employee_role
+      can :read, Project
+      can :update, Project do |project|
+      project.try(:employee_role) == employee_role
     end
     elsif employee_role.lead?
       can :manage, :devloper

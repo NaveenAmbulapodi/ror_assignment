@@ -17,7 +17,7 @@
     <% @employee_roles.each do |employee_role| %>
       <tr>
         <td><%= employee_role.name %></td>
-        <td><%= employee_role.role.name %></td>
+        <td><%= employee_role.role%></td>
         <td><%= link_to 'Show', employee_role %></td>
         <td><%= link_to 'Edit', edit_employee_role_path(employee_role) %></td>
         <td><%= link_to 'Destroy', employee_role, method: :delete, data: { confirm: 'Are you sure?' } %></td>

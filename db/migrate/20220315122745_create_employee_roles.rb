@@ -2,8 +2,9 @@ class CreateEmployeeRoles < ActiveRecord::Migration[6.1]
   def change
     create_table :employee_roles do |t|
       t.string :name
-      t.belongs_to :role, null: false, foreign_key: true
-
+      t.string :role
+      t.string :permission
+      
       t.timestamps
     end
   end

@@ -5,7 +5,11 @@
 <h2>Editing Employee Role</h2>
 
 <%= render 'form', employee_role: @employee_role %>
-
-<%= link_to 'Show', @employee_role %> |
-<%= link_to 'Back', employee_roles_path %>
-</div>
+<%= nav_bar fixed: :top, brand: "ROR ASSIGNMENT" do %>
+    <%= menu_group do %>
+        <%= menu_item "PROJECTS", projects_path %>
+        <%= menu_item "BLOGS", blogs_path %>
+        <%= menu_item "EMPLOYEE RATINGS", employee_ratings_path %>
+        <%= menu_item "EMPLOYEE ROLES", employee_roles_path %>
+    <% end %>
+    <% end %>
